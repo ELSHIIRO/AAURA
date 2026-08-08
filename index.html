@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AAURA Smart Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: #38bdf8;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    input, button {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    button {
+      background: #38bdf8;
+      color: black;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+
+    .resultado {
+      margin-top: 15px;
+      background: #0f172a;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🏠 AAURA Smart Home</h1>
+    <p>Control inteligente con IA (modo simple)</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Generador de escena</h2>
+      <input type="text" id="mensaje" placeholder="Ej: Enciende luces azules y música relajante">
+      <button onclick="generar()">Generar</button>
+
+      <div class="resultado" id="resultado"></div>
+    </div>
+
+  </div>
+
+  <script>
+    function generar() {
+      const mensaje = document.getElementById("mensaje").value;
+      const resultado = document.getElementById("resultado");
+
+      if (!mensaje) {
+        resultado.innerHTML = "⚠️ Escribe un mensaje primero";
+        return;
+      }
+
+      // Simulación de IA (antes lo hacía tu backend)
+      resultado.innerHTML = `
+        🤖 Escena generada:<br><br>
+        ✔ Luces: Azul suave<br>
+        ✔ Música: Relajante<br>
+        ✔ Ambiente: Tranquilo<br><br>
+        📩 Mensaje: "${mensaje}"
+      `;
+    }
+  </script>
+
+</body>
+</html>
